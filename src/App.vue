@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Главная</router-link> |
+    <router-link to="/about">Задачи</router-link>
   </nav>
   <router-view/>
 </template>
@@ -15,12 +15,20 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+body {
+  background: url("assets/img.png") no-repeat;
+}
 
+nav {
+  padding: 20px;
+  margin: auto;
+  top: -10px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #ffffff;
 
     &.router-link-exact-active {
       color: #42b983;
