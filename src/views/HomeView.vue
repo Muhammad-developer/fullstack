@@ -45,6 +45,7 @@ export default {
   async mounted() {
     this.items = await this.$store.dispatch('getTasks');
   },
+<<<<<<< finish
 
   methods: {
     async filterByDate() {
@@ -57,6 +58,7 @@ export default {
       const text = document.getElementById('search').value;
       return this.items = await this.$store.dispatch('getFilterByStatus', { text });
     }
+>>>>>>> fullstack
   }
 }
 </script>
