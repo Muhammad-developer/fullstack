@@ -1,5 +1,11 @@
 <template>
   <h1>Задачи</h1>
+<!--  <div id="app">-->
+<!--    <div v-for="item in filteredItems" :key="item.id">-->
+<!--      <p>{{ item.name }}</p>-->
+<!--    </div>-->
+<!--    <input type="text" v-model="search">-->
+<!--  </div>-->
   <div class="container">
     <div class="home">
       <table id="tasks" class="table">
@@ -30,17 +36,25 @@ export default {
   },
   async mounted() {
     this.items = await this.$store.dispatch('getTasks');
+  },
+  computed: {
+    // filteredItems() {
+    //   return this.items.filter(items => {
+    //     return items.status.toLowerCase().indexOf(this.search.toLowerCase()) > -1
+    //   })
+    // }
   }
 }
 </script>
 <style>
 body {
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+}
+
+h1 {
+  color: white;
 }
 
 .container {
